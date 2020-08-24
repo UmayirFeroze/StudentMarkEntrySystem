@@ -1,0 +1,162 @@
+<%@Page Language = C#%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script runat="server">
+        string varFirstName, varSurname, varCourseType ;
+        int varstudentID, varCourseTypeVal;
+        int neededCredit = 0;
+        public class Unit
+        {
+            private string unitCode;
+            private int creditPoint;
+            private int semID;
+            private int marks;
+
+            public Unit(string unitCode,int creditPoint,int semID,int marks)
+            {
+                this.UnitCode=unitCode;
+                this.CreditPoint=creditPoint;
+                this.SemesterID= semID;
+                this.Marks = marks;
+            }
+
+            public String UnitCode
+              {
+                get
+                    {
+                        return unitCode;
+                    }
+                set
+              {
+                        unitCode = value;
+              }
+        }
+            public int CreditPoint
+              {
+                get
+                    {
+                        return creditPoint;
+                    }
+                set
+              {
+                        if (value--15 || value ==20)
+              {
+                        creditPoint = value;
+              }
+               else
+             {
+                throw new ArgumentException("Value is invalid for credit point");
+             }
+        }
+             public int SemestedID
+              {
+                get
+                    {
+                        return semID;
+                    }
+                set
+              {
+                        semID = value;
+              {
+
+             }
+        }
+
+             public int Marks
+              {
+                get
+                    {
+                        return marks;
+                    }
+                set
+              {
+                        if (value->=0 && value <=100)
+              {
+                        creditPoint = value;
+              }
+               else
+             {
+                throw new ArgumentException("Marks in out of range");
+             }
+
+        }
+        public double getAverage(List<Unit>listOfUnits)
+        {
+            double total = 0;
+            double credit = 0;
+            foreach(Unit unit in listOfUnits)
+            {
+                if(unit.Marks>=50)
+            
+            {
+                total += unit.CreditPoint * unit.Marks;
+                credit += unit.CreditPoint;
+            }
+            
+            return Math.Round(total / credit, 2);
+
+        }
+
+    </script>
+</head>
+<body>
+    <%
+    varFirstName=Request.Form["Firstname"];
+    varSurname=Request.Form["Surname"];
+    varstudentID=Int32.Parse(Request.Form["StudentID"]);
+    varCourseTypeVal=Int32.Parse(Request.Form["CourseType"]);
+    if (varCourseTypeVal==1)
+    {
+    varCourseType = "Undergraduate Degree";
+    neededCredit = 360;
+    }
+    else if (varCourseTypeVal==2)
+    {
+    varCourseType = "Graduate Diploma";
+    neededCredit = 120;
+    }
+
+    %>
+
+    <strong>Course progress Analyzer</strong><br />
+    <hr />
+    <strong>studentID: </strong><%=varstudentID%><br />
+    <strong>First Name: </strong><%=varFirstName%><br />
+    <strong>Surname: </strong><%=varSurname%><br />
+    <strong>course Type: </strong><%=varCourseType%><br />
+
+    <%
+    List<unit>listoUnit=new </unit>();
+
+    for (int i=4; i < 124; i++)
+    {
+    string unitCode =Request.Form[i++];
+    int creditPoint=int.Parse(Request.Form[i++]);
+    int semID = int.Parse(Request.Form[i++]);
+    int marks = int.Parse(Request.Form[i]);
+
+    Unit unit = new Unit(unitCode, creditPoint, semID, marks);
+    listoUnit.Add(unit);
+    }
+
+    int totalCreditPointsAchieved = 0;
+    foreach(Unit unit in listofUnit)
+    {
+    if(unit.Marks>=50)
+    {
+    totalCreditPointAchieved = +unit.CreditPoint;
+    }
+    }
+
+    Response.Write("<strong>Total Credit Needed</strong>"+neededCredit + "<br/");
+    Response.Write("<strong>Total Credit Achieved</strong>"+totalCreditPointAchieved + "<br/");
+    Response.Write("<strong>Total Remaining credit</strong>"+(neededCredit-totalCreditPointAchieved) + "<br/");
+    Response.Write("<strong>Total Units attempted</strong>"+listofUnit.Count + "<br/");
+    Response.Write("<strong>Average</strong>"+getAverage(listofUnit) + "<br/");
+    %>
+
+</body>
+</html>

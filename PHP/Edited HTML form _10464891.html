@@ -1,0 +1,590 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CPA</title>
+<style>
+  body
+  {
+    font-family: Times New Roman;
+  }
+  input{
+    background-color: #E0E0E0;
+  }
+  select
+  {
+    background-color: #E0E0E0;
+  }
+
+  .content 
+  {
+    border-color: black; 
+    border-style: solid; 
+    width: 509px;
+    padding: 30px 30px 30px 30px;
+    max-width: 960px;
+    margin: auto;
+  }
+
+  label
+  {
+    width: 7em;
+    float: left;
+  }
+  .padding
+  {
+    margin: 5px;
+  }
+  
+</style>
+</head>
+
+
+<body bgcolor="#FFFFFF">
+<div class="content">
+<h1 align="center">Course Progession Analyser</h1>
+<hr />
+
+<form method="post" action="Assignment1php">
+
+  <h3>Student Details</h3>
+  <label>Firstname</label>
+  <input class="padding" name="Firstname" type="text" id="Firstname" size="20" maxlength="50" required/><br>
+  <label>Surname</label>
+  <input class="padding" name="Surname" type="text" id="Surname" size="20" maxlength="50" required /><br>
+  <label>Student ID</label>
+  <input class="padding" name="StudentID" type="text" id="StudentID" size="8" maxlength="8" required/><br>
+  <label>Course Type</label>
+  <select class="padding" name="CourseType" id="CourseType">
+    <option value="Undergraduate Degree" selected="selected">Undergraduate Degree</option>
+    <option value="Graduate Diploma">Graduate Diploma</option>
+    <option value="Masters by Coursework">Masters by Coursework</option>
+    <option value="Masters by Research">Masters by Research</option>
+  </select>
+  <h3>Unit Details</h3>
+<table align="center" width="509" border="3" >
+  <tr>
+    <th><p align="center"><strong>Unit Code </strong></p></th>
+    <th><p align="center"><strong>Credit Points </strong></p></th>
+    <th><p align="center"><strong>Year/Semester</strong></p></tH>
+    <th><strong>Mark ( / 100) </strong></th>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_1" type="text" id="UnitCode_1" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_1" id="CP_1">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_1" type="text" id="YS_1" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_1" type="text" id="UM_1" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_2" type="text" id="UnitCode_2" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_2" id="CP_2">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_2" type="text" id="YS_2" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_2" type="text" id="UM_2" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_3" type="text" id="UnitCode_3" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+     <select name="CP_3" id="CP_3">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select> 
+    </div></td>
+    <td><div align="center">
+        <input name="YS_3" type="text" id="YS_3" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_3" type="text" id="UM_3" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_4" type="text" id="UnitCode_4" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_4" id="CP_4">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_4" type="text" id="YS_4" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_4" type="text" id="UM_4" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_5" type="text" id="UnitCode_5" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_5" id="CP_5">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_5" type="text" id="YS_5" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_5" type="text" id="UM_5" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_6" type="text" id="UnitCode_6" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_6" id="CP_6">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_6" type="text" id="YS_6" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_6" type="text" id="UM_6" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_7" type="text" id="UnitCode_7" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_6" id="CP_6">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_7" type="text" id="YS_7" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_7" type="text" id="UM_7" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_8" type="text" id="UnitCode_8" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_8" id="CP_8">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_8" type="text" id="YS_8" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_8" type="text" id="UM_8" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_9" type="text" id="UnitCode_9" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_9" id="CP_9">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_9" type="text" id="YS_9" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_9" type="text" id="UM_9" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_10" type="text" id="UnitCode_10" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_10" id="CP_10">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_10" type="text" id="YS_10" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_10" type="text" id="UM_10" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_11" type="text" id="UnitCode_11" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+     <select name="CP_11" id="CP_11">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_11" type="text" id="YS_11" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_11" type="text" id="UM_11" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_12" type="text" id="UnitCode_12" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_12" id="CP_12">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_12" type="text" id="YS_12" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_12" type="text" id="UM_12" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_13" type="text" id="UnitCode_13" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_13" id="CP_13">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select> 
+    </div></td>
+    <td><div align="center">
+        <input name="YS_13" type="text" id="YS_13" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_13" type="text" id="UM_13" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_14" type="text" id="UnitCode_14" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_14" id="CP_14">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select> 
+    </div></td>
+    <td><div align="center">
+        <input name="YS_14" type="text" id="YS_14" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_14" type="text" id="UM_14" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_15" type="text" id="UnitCode_15" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_15" id="CP_15">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select> 
+    </div></td>
+    <td><div align="center">
+        <input name="YS_15" type="text" id="YS_15" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_15" type="text" id="UM_15" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_16" type="text" id="UnitCode_16" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_16" id="CP_16">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_16" type="text" id="YS_16" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_16" type="text" id="UM_16" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_17" type="text" id="UnitCode_17" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_17" id="CP_17">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_17" type="text" id="YS_17" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_17" type="text" id="UM_17" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_18" type="text" id="UnitCode_18" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_18" id="CP_18">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_18" type="text" id="YS_18" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_18" type="text" id="UM_18" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_19" type="text" id="UnitCode_19" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_19" id="CP_19">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_19" type="text" id="YS_19" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_19" type="text" id="UM_19" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_20" type="text" id="UnitCode_20" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_20" id="CP_20">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_20" type="text" id="YS_20" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_20" type="text" id="UM_20" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_21" type="text" id="UnitCode_21" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_21" id="CP_21">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_21" type="text" id="YS_21" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_21" type="text" id="UM_21" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_22" type="text" id="UnitCode_22" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_22" id="CP_22">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_22" type="text" id="YS_22" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_22" type="text" id="UM_22" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_23" type="text" id="UnitCode_23" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+     <select name="CP_23" id="CP_23">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_23" type="text" id="YS_23" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_23" type="text" id="UM_23" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_24" type="text" id="UnitCode_24" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_24" id="CP_24">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_24" type="text" id="YS_24" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_24" type="text" id="UM_24" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_25" type="text" id="UnitCode_25" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_25" id="CP_25">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+    </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_25" type="text" id="YS_25" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_25" type="text" id="UM_25" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_26" type="text" id="UnitCode_26" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_26" id="CP_26">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+      </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_26" type="text" id="YS_26" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_26" type="text" id="UM_26" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_27" type="text" id="UnitCode_27" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_27" id="CP_27">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+      </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_27" type="text" id="YS_27" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_27" type="text" id="UM_27" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_28" type="text" id="UnitCode_28" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_28" id="CP_28">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+      </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_28" type="text" id="YS_28" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_28" type="text" id="UM_28" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_29" type="text" id="UnitCode_29" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_29" id="CP_29">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+      </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_29" type="text" id="YS_29" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_29" type="text" id="UM_29" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td><div align="center">
+      <input name="UnitCode_30" type="text" id="UnitCode_30" size="7" maxlength="7" />
+    </div></td>
+    <td><div align="center">
+      <select name="CP_30" id="CP_30">
+      <option value="15" selected="selected">15</option>
+      <option value="20">20</option>
+      </select>
+    </div></td>
+    <td><div align="center">
+        <input name="YS_30" type="text" id="YS_30" size="3" maxlength="3" />
+    </div></td>
+    <td><div align="center">
+        <input name="UM_30" type="text" id="UM_30" size="3" maxlength="3" />
+    </div></td>
+  </tr>
+  <tr>
+    <td colspan="4"><input type="submit" name="Submit" value="Submit" /> <input name="Reset" type="reset" id="Reset" value="Reset" /></td>
+  </tr>
+  </form>
+</table>
+</div>
+</body>
+</html>
